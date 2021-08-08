@@ -55,7 +55,8 @@ class Buscador extends Component {
 
                     <button className='fav' onClick={() => this.props.addMovieFavorite({
                       title: movie.Title,
-                      id: movie.imdbID
+                      id: movie.imdbID,
+                      poster: movie.Poster
                     })}>FAV</button>
                   </div>
                 </div>

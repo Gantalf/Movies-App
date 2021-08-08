@@ -15,8 +15,13 @@ class Movie extends React.Component {
     console.log(this.props)
     return (
       <div className="movie-detail">
-        <div>
-          <li>Titulo:{this.props.movies.Title}</li>
+        <img
+          className='img'
+          src={this.props.movies.Poster}
+          alt={this.props.movies.Title}
+        />
+        <div className='movie-detail--text'>
+          <li className='title'>Titulo:{this.props.movies.Title}</li>
           <li>Año:{this.props.movies.Year}</li>
           <li>Puntuacion:{this.props.movies.Rated}</li>
           <li>Duracion:{this.props.movies.Runtime}</li>
