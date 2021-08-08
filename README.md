@@ -33,7 +33,7 @@ Abra http: // localhost: 3000 para verlo en el navegador.
 
 ### API
 
-Para este proyecto utilizamos la [API OMDb](http://www.omdbapi.com/) de Open Movie Database. La apikey se exporta del archivo config.js
+Para este proyecto utilizamos la [API OMDb](http://www.omdbapi.com/) de Open Movie Database. La apikey se exporta del archivo config . js
 
 ### Ejemplo
 
