@@ -1,10 +1,65 @@
+.cont{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px auto;
+  align-items: center;
+}
+
 .cnt {
     padding-top: 10px;
 }
 .form-container {
-    display:flex;
-    flex-direction: row;
-    align-items: flex-start;
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+h2 {
+  margin: 10px;
+  font-size: 50px;
+  color: rgb(10, 9, 9);
+}
+
+.submit{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 100px;
+  box-shadow: 0 1px 6px 0 #20212447;
+}
+
+.submit:hover{
+  cursor: pointer;
+  background-color: rgb(12, 12, 12);
+}
+
+.fav{
+  background-color: rgb(73, 67, 41);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 100px;
+  box-shadow: 0 1px 6px 0 #20212447;
+}
+
+.fav:hover{
+  cursor: pointer;
+  background-color: rgb(12, 12, 12);
+}
+
+input{
+  width: 450px;
+  height: 44px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  border: 1px solid #dfe1e5;
+  text-indent: 20px; /* para correr el texto del placeholder*/
 }
 
 .form-container button {
@@ -12,4 +67,57 @@
 }
 .label {
     padding-right: 10px;
+}
+
+.cards__container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.card__item{
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 350px;
+  margin-right: 10px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.card__item--img{
+  width: 300px;
+  height: 350px;
+  /*mantiene la calidad de la imagen*/
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__item--details{
+  align-items: flex-start;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  bottom: 0;
+  display: flex;
+  font-size: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card__item--details-name {
+  color: rgb(243, 233, 233);
+  font-size: 1.8rem;
+  margin: 5px 0px 0px 0px;
+  cursor: pointer;
 }

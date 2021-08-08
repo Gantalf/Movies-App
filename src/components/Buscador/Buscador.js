@@ -22,37 +22,43 @@ class Buscador extends Component {
   }
 
   render() {
-    const { title } = this.state;
+    const { title, } = this.state;
     return (
-      <div>
-        <h2>Buscador</h2>
+      <div className='cont'>
         <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
-          <div>
-            <label className="label" htmlFor="title">Película: </label>
+          <h2>Busca una Película</h2>
+          <div className="main-input-container">
             <input
               type="text"
               id="title"
               autoComplete="off"
+              placeholder="ejm: Inception"
               value={title}
               onChange={(e) => this.handleChange(e)}
             />
+            <button className='submit' type="submit">BUSCAR</button>
           </div>
-          <button type="submit">BUSCAR</button>
         </form>
-        <ul>
+        <ul className='cards__container'>
           {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas */
             this.props.movies.map(movie => {
               return (
-                <>
-                  <Link to={`/movie/${movie.imdbID}`}>
-                    <li>{movie.Title}</li>
-                  </Link>
+                <div className='card__item'>
+                  <img
+                    className="card__item--img"
+                    src={movie.Poster}
+                  />
+                  <div className="card__item--details">
+                    <Link to={`/movie/${movie.imdbID}`}>
+                      <li className='card__item--details-name'>{movie.Title}</li>
+                    </Link>
 
-                  <button onClick={() => this.props.addMovieFavorite({
-                    title: movie.Title,
-                    id: movie.imdbID
-                  })}>FAV</button>
-                </>
+                    <button className='fav' onClick={() => this.props.addMovieFavorite({
+                      title: movie.Title,
+                      id: movie.imdbID
+                    })}>FAV</button>
+                  </div>
+                </div>
               )
             })
           }
